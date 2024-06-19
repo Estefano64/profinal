@@ -27,6 +27,7 @@
 
             @yield('content')
         </main>
+   <!--espacio de separacion entre el footer y las cards(no borrar) -->
 <> </>
     </div>
 
@@ -35,7 +36,7 @@
     @livewireScripts
 </body>
 <footer>
-
+    <!-- Componente Footer -->
     @include('components.footer')
 </footer>
 </html>
