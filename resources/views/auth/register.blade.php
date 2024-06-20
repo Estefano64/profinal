@@ -16,40 +16,60 @@
                     @csrf
 
                     <div class="mt-4">
-                        <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
+                        <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Nombre</label>
                         <input id="name" class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none" type="text" name="name" :value="old('name')" required autofocus autocomplete="name">
                     </div>
 
                     <div class="mt-4">
-                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
+                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Correo Electrónico</label>
                         <input id="email" class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none" type="email" name="email" :value="old('email')" required autocomplete="username">
                     </div>
 
                     <div class="mt-4">
-                        <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+                        <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Contraseña</label>
                         <input id="password" class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none" type="password" name="password" required autocomplete="new-password">
                     </div>
 
                     <div class="mt-4">
-                        <label for="password_confirmation" class="block text-gray-700 text-sm font-bold mb-2">Confirm Password</label>
+                        <label for="password_confirmation" class="block text-gray-700 text-sm font-bold mb-2">Confirmar Contraseña</label>
                         <input id="password_confirmation" class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none" type="password" name="password_confirmation" required autocomplete="new-password">
                     </div>
 
-                    @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
-                        <div class="mt-4">
-                            <label for="terms">
-                                <div class="flex items-center">
-                                    <input id="terms" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="terms" required>
-                                    <div class="ms-2">
-                                        {!! __('I agree to the :terms_of_service and :privacy_policy', [
-                                            'terms_of_service' => '<a target="_blank" href="'.route('terms.show').'" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">'.__('Terms of Service').'</a>',
-                                            'privacy_policy' => '<a target="_blank" href="'.route('policy.show').'" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">'.__('Privacy Policy').'</a>',
-                                        ]) !!}
-                                    </div>
-                                </div>
-                            </label>
-                        </div>
-                    @endif
+                    <div class="mt-4">
+                        <label for="rol" class="block text-gray-700 text-sm font-bold mb-2">Rol</label>
+                        <select id="rol" name="rol" class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none" required>
+                            <option value="">Seleccione un rol</option>
+                            <option value="Mozo">Mozo</option>
+                            <option value="Encargado">Encargado</option>
+                            <option value="Cajero">Cajero</option>
+                        </select>
+                    </div>
+
+                    <div class="mt-4">
+                        <label for="nivelAcceso" class="block text-gray-700 text-sm font-bold mb-2">Nivel de Acceso</label>
+                        <select id="nivelAcceso" name="nivelAcceso" class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none" required>
+                            <option value="">Seleccione un nivel</option>
+                            <option value="I">I</option>
+                            <option value="II">II</option>
+                            <option value="III">III</option>
+                        </select>
+                    </div>
+
+                    <div class="mt-4">
+                        <label for="DNI" class="block text-gray-700 text-sm font-bold mb-2">DNI</label>
+                        <input id="DNI" class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none" type="text" name="DNI" :value="old('DNI')" required>
+                    </div>
+
+                    <div class="mt-4">
+                        <label for="direccion" class="block text-gray-700 text-sm font-bold mb-2">Dirección</label>
+                        <input id="direccion" class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none" type="text" name="direccion" :value="old('direccion')">
+                    </div>
+
+                    <div class="mt-4">
+                        <label for="telefono" class="block text-gray-700 text-sm font-bold mb-2">Teléfono</label>
+                        <input id="telefono" class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none" type="text" name="telefono" :value="old('telefono')">
+                    </div>
+
 
                     <div class="flex items-center justify-end mt-4">
                         <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">

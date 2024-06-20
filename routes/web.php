@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MesaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -14,6 +15,10 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+});
+// Grupo de rutas que requieren autenticación
+Route::middleware('auth')->group(function () {
+    Route::resource('mesas', MesaController::class);
 });
 
 Route::get('/home', function () {

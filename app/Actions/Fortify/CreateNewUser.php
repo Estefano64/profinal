@@ -23,6 +23,11 @@ class CreateNewUser implements CreatesNewUsers
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => $this->passwordRules(),
+            'rol' => ['required', 'string', 'in:Mozo,Encargado,Cajero'],
+            'nivelAcceso' => ['required', 'string', 'in:I,II,III'],
+            'DNI' => ['required', 'string', 'size:8', 'unique:users'],
+            'direccion' => ['nullable', 'string', 'max:200'],
+            'telefono' => ['nullable', 'string', 'max:9'],
             'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['accepted', 'required'] : '',
         ])->validate();
 
@@ -30,6 +35,11 @@ class CreateNewUser implements CreatesNewUsers
             'name' => $input['name'],
             'email' => $input['email'],
             'password' => Hash::make($input['password']),
+            'rol' => $input['rol'],
+            'nivelAcceso' => $input['nivelAcceso'],
+            'DNI' => $input['DNI'],
+            'direccion' => $input['direccion'],
+            'telefono' => $input['telefono'],
         ]);
     }
 }
