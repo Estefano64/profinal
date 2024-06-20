@@ -9,28 +9,28 @@
                 <ul class="flex gap-6">
                     <li class="p-1 font-sans text-sm font-normal leading-normal text-black">
                         <a href="#" class="flex items-center">
-                            Pages
+                            Menu
                         </a>
                     </li>
                     <li class="p-1 font-sans text-sm font-normal leading-normal text-black">
                         <a href="#" class="flex items-center">
-                            Account
+                             Establecimiento
                         </a>
                     </li>
                     <li class="p-1 font-sans text-sm font-normal leading-normal text-black">
                         <a href="#" class="flex items-center">
-                            Blocks
+                              Quiénes somos
                         </a>
                     </li>
                     <li class="p-1 font-sans text-sm font-normal leading-normal text-black">
                         <a href="#" class="flex items-center">
-                            Docs
+                            Contacto
                         </a>
                     </li>
                 </ul>
             </div>
             <div class="flex items-center gap-2">
-                <button onclick="window.location='{{ route('register') }}'" 
+                <button onclick="window.location.href='{{ route('register') }}'"
                         class="hidden px-4 py-2 text-xs font-bold uppercase text-black transition-all rounded-lg hover:bg-gray-900/10 active:bg-gray-900/20 lg:inline-block"
                         type="button">
                     Registrarme
