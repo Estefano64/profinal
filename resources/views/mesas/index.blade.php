@@ -1,11 +1,10 @@
 <!-- resources/views/mesas/index.blade.php -->
 
-<!-- resources/views/mesas/index.blade.php -->
 
 @extends('layouts.new')
 
 @section('content')
-    @component('components.gestion.table', [
+    @component('components.gestion.index', [
         'title' => 'Listado de Mesas',
         'createRoute' => route('mesas.create'),
         'createButtonText' => 'Nueva Mesa',
