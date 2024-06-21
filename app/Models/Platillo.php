@@ -9,7 +9,7 @@ class Platillo extends Model
 {
     use HasFactory;
 
-    protected $primarykey='idPlatillo';
+    protected $primaryKey='idPlatillo';
 
     protected $fillable = ['nombre', 'descripcion', 'precio'];
 }
