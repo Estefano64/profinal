@@ -2,6 +2,6 @@
 
 @section('content')
 
-@include('components.mainpage.bodydish')
+@include('components.mainpage.piqueoPage')
 
 @endsection

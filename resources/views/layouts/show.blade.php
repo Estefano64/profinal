@@ -37,6 +37,9 @@
 </body>
 <footer>
     <!-- Componente Footer -->
-    @include('components.footer')
+     <x-footer>
+
+     </x-footer>
+   
 </footer>
 </html>

@@ -2,7 +2,7 @@
 
 <div class="text-center p-10">
     <h1 class="font-bold text-4xl mb-4">¿Que vamos a comer hoy?</h1>
-    <h1 class="text-3xl"> Los mejores pollos a la brasas de Arequipa</h1>
+    <h1 class="text-3xl"> Los mejores pollos a la brasas de areequipa</h1>
 </div>
 
 <!-- ✅ Grid Section - Starts Here 👇 -->
@@ -56,7 +56,7 @@
 <section id="Projects" class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
 
     <div class="w-172 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-        <a href="#">
+        <a href="{{ route('brasas')}}">
             <img src="{{ asset('imghome/brasas.jpg') }}" alt="Product" class="h-80 w-172 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
 
@@ -67,8 +67,8 @@
     </div>
 
     <div class="w-172 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-        <a href="#">
-            <img src="{{ asset('imghome/parrilas.jpg') }}" alt="Product" class="h-80 w-172 object-cover rounded-t-xl" />
+        <a href="{{ route('parrillas')}}">
+            <img src="{{ asset('imghome/parrillas.jpg') }}" alt="Product" class="h-80 w-172 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-172">
 
                 <p class="text-lg font-bold text-black truncate block capitalize">PARRILLAS</p>
@@ -78,7 +78,7 @@
     </div>
 
     <div class="w-172 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-        <a href="#">
+        <a href="{{ route('piqueos')}}">
             <img src="{{ asset('imghome/salchipapa.png') }}" alt="Product" class="h-80 w-172 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-172">
 
@@ -89,7 +89,7 @@
     </div>
 
     <div class="w-172 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-        <a href="#">
+        <a href="{{ route('extras')}}">
             <img src="{{ asset('imghome/extras.jpg') }}" alt="Product" class="h-80 w-172 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
 
@@ -100,8 +100,8 @@
     </div>
 
     <div class="w-172 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-        <a href="#">
-            <img src="{{ asset('imghome/combinado.jpg') }}" alt="Product" class="h-80 w-172 object-cover rounded-t-xl" />
+        <a href="{{ route('combinados')}}">
+            <img src="{{ asset('imghome/combinados.jpg') }}" alt="Product" class="h-80 w-172 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
 
                 <p class="text-lg font-bold text-black truncate block capitalize">COMBINADOS</p>
@@ -111,7 +111,7 @@
     </div>
 
     <div class="w-172 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-        <a href="#">
+        <a href="{{ route('bebidas')}}">
             <img src="{{ asset('imghome/bebidas.jpg') }}" alt="Product" class="h-80 w-172 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
 
