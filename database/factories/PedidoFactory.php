@@ -2,9 +2,10 @@
 
 namespace Database\Factories;
 
-use App\Models\Pedido;
+use App\Models\PedidoPlatillo;
+use App\Models\Cuenta;
 use App\Models\Mesa;
-use App\Models\CuentaCliente;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -22,8 +23,10 @@ class PedidoFactory extends Factory
         return [
             'estado' => $this->faker->randomElement(['pendiente', 'enProceso', 'completado', 'entregado']),
             'tipo' => $this->faker->randomElement(['paraLlevar', 'enLocal']),
+            'user_id' => User::inRandomOrder()->first()->id,
             'idMesa' => Mesa::inRandomOrder()->first()->idMesa,
-            'idCuentaCliente' => CuentaCliente::inRandomOrder()->first()->idCuentaCliente,
+            'idPedidoPlatillo' => PedidoPlatillo::inRandomOrder()->first()->idPedidoPlatillo,
+            'idCuenta' => Cuenta::inRandomOrder()->first()->idCuenta
         ];
     }
 }

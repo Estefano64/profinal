@@ -20,10 +20,10 @@ class CuentaFactory extends Factory
     public function definition(): array
     {
         return [
-            'totalPagar' => $this->faker->randomFloat(2, 10, 200),
             'idCuentaCliente' => CuentaCliente::inRandomOrder()->first()->idCuentaCliente,
         'idMetodoPago' => MetodoPago::inRandomOrder()->first()->idMetodoPago,
-            'estado' => $this->faker->randomElement(['pagado', 'pendiente']),
+            'estado' => $this->faker->randomElement(['pagado', 'pendiente'])
         ];
     }
 }
+

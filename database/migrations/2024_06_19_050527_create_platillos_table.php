@@ -14,8 +14,8 @@ class CreatePlatillosTable extends Migration
         Schema::create('platillos', function (Blueprint $table) {
             $table->id('idPlatillo');
             $table->string('nombre', 40);
-            $table->string('descripcion', 100);
-            $table->decimal('precio', 10, 2);
+            $table->string('descripcion', 100)->nullable();
+            $table->decimal('precio', 8, 2);
             $table->timestamps();
         });
     }
@@ -25,6 +25,13 @@ class CreatePlatillosTable extends Migration
      */
     public function down(): void
     {
+        // Desactivar restricciones de clave foránea
+        Schema::disableForeignKeyConstraints();
+        
         Schema::dropIfExists('platillos');
+        
+        // Reactivar restricciones de clave foránea
+        Schema::enableForeignKeyConstraints();    
+        
     }
 }

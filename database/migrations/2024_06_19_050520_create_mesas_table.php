@@ -25,6 +25,12 @@ class CreateMesasTable extends Migration
      */
     public function down(): void
     {
+        // Desactivar restricciones de clave foránea
+        Schema::disableForeignKeyConstraints();
+        
         Schema::dropIfExists('mesas');
+        
+        // Reactivar restricciones de clave foránea
+        Schema::enableForeignKeyConstraints();
     }
 };

@@ -11,21 +11,26 @@ class Pedido extends Model
 
     protected $primaryKey='idPedido';
 
-    protected $fillable = ['estado', 'tipo', 'idMesa', 'idCuentaCliente'];
+    protected $fillable = ['estado', 'tipo', 'idMesa', 'user_id', 'idCuenta', 'idPedidoPlatillo'];
 
     public function mesa()
     {
         return $this->belongsTo(Mesa::class, 'idMesa');
     }
 
-    public function cuentaCliente()
+    public function usuario()
     {
-        return $this->belongsTo(CuentaCliente::class, 'idCuentaCliente');
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function cuenta()
+    {
+        return $this->belongsTo(Cuenta::class, 'idCuenta');
     }
 
     public function platillos()
-    {
-        return $this->belongsToMany(Platillo::class, 'pedido_platillo', 'idPedido', 'idPlatillo')
-                    ->withPivot('cantidad');
-    }
+{
+        return $this->belongsToMany(Platillo::class, 'pedido_platillos', 'idPedido', 'idPlatillo')
+                    ->withPivot('cantidad','total');
+}
 }

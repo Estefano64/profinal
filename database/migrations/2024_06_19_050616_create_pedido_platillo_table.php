@@ -13,9 +13,10 @@ class CreatePedidoPlatilloTable extends Migration
     {
         Schema::create('pedido_platillos', function (Blueprint $table) {
             $table->id('idPedidoPlatillo');
-            $table->foreignId('idPedido')->constrained('pedidos','idPedido');
             $table->foreignId('idPlatillo')->constrained('platillos','idPlatillo');
-            $table->integer('cantidad');
+            $table->integer('cantidad');            
+            $table->string('nota', 100)->nullable();
+            $table->decimal('total', 6, 2);
             $table->timestamps();
         });
     }
@@ -25,6 +26,6 @@ class CreatePedidoPlatilloTable extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pedido_platillo');
+        Schema::dropIfExists('pedido_platillos');
     }
 };
