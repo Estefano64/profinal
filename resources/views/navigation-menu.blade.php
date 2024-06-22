@@ -24,6 +24,9 @@
                      <x-nav-link href="{{ route('cuentaClientes.index') }}" :active="request()->routeIs('cuentaClientes.index')">
                                     {{ __('Clientes') }}
                      </x-nav-link>
+                     <x-nav-link href="{{ route('metodoPagos.index') }}" :active="request()->routeIs('metodoPagos.index')">
+                                    {{ __('MétodosPago') }}
+                     </x-nav-link>
                 </div>
             </div>
 
