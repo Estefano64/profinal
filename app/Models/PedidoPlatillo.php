@@ -11,7 +11,7 @@ class PedidoPlatillo extends Model
 
     protected $table = 'pedido_platillos';
 
-    protected $primarykey='idPedidoPlatillo';
+    protected $primaryKey='idPedidoPlatillo';
 
     protected $fillable = ['idPedido', 'idPlatillo', 'cantidad'];
 

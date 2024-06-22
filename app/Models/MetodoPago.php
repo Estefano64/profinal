@@ -11,7 +11,7 @@ class MetodoPago extends Model
 
     protected $table = 'metodo_pagos';
 
-    protected $primarykey='idMetodoPago';
+    protected $primaryKey='idMetodoPago';
 
     protected $fillable = ['nombreMetodo'];
 };

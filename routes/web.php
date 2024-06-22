@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MesaController;
 use App\Http\Controllers\PlatilloController;
+use App\Http\Controllers\CuentaClienteController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -21,6 +22,7 @@ Route::middleware([
 Route::middleware('auth')->group(function () {
     Route::resource('mesas', MesaController::class);
     Route::resource('platillos', PlatilloController::class);
+    Route::resource('cuentaClientes', CuentaClienteController::class);
 });
 
 Route::get('/home', function () {

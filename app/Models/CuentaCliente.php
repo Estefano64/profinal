@@ -11,7 +11,7 @@ class CuentaCliente extends Model
 
     protected $table = 'cuenta_clientes';
 
-    protected $primarykey='idCuentaCliente';
+    protected $primaryKey='idCuentaCliente';
 
     protected $fillable = ['nombre', 'dni'];
 }

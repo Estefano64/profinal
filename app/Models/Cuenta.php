@@ -9,7 +9,7 @@ class Cuenta extends Model
 {
     use HasFactory;
 
-    protected $primarykey='idCuenta';
+    protected $primaryKey='idCuenta';
 
     protected $fillable = ['totalPagar', 'idCuentaCliente', 'idMetodoPago', 'estado'];
 
