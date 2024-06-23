@@ -28,12 +28,9 @@
             @yield('content')
         </main>
    <!--espacio de separacion entre el footer y las cards(no borrar) -->
-<> </>
+            <> </>
     </div>
 
-    @stack('modals')
-
-    @livewireScripts
 </body>
 <footer>
     <!-- Componente Footer -->

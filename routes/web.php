@@ -25,6 +25,8 @@ Route::get('/home', function () {
     return view('home');
 })->name('home');
 
+//rutas para las categorias de platillos que ofrece
+
 Route::get('/info', function () {
     return view('mainpage.info');
 })->name('info');
@@ -53,3 +55,16 @@ Route::get('/piqueos', function () {
     return view('mainpage.piqueos');
 })->name('piqueos');
 
+//rutas para los combos de la hompeage
+
+Route::get('/comboPersonal', function () {
+    return view('mainpage.comboPersonal');
+})->name('comboPersonal');
+
+Route::get('/comboPareja', function () {
+    return view('mainpage.comboPareja');
+})->name('comboPareja');
+
+Route::get('/comboFamiliar', function () {
+    return view('mainpage.comboFamiliar');
+})->name('comboFamiliar');

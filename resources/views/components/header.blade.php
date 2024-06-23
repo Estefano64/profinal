@@ -1,8 +1,8 @@
 <nav class="sticky top-0 z-10 w-full px-4 py-2 border-none shadow-md bg-white bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200 lg:px-8 lg:py-4">
     <div class="flex items-center justify-between">
         <a href="{{ route('home') }}" class="mr-4 flex items-center py-1.5 font-sans text-base font-medium leading-relaxed text-black antialiased">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo de Polleria Miguelon" class="h-10 w-auto mr-2">
-            <span class="self-center text-2xl font-semibold whitespace-nowrap">Polleria Miguelon</span>
+            <img src="{{ asset('images/logoHeader.png') }}" alt="Logo de Polleria Miguelon" class="h-16 w-auto mr-2">
+          
         </a>
         <div class="flex items-center gap-4">
             <div class="hidden lg:block">
