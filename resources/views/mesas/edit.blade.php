@@ -3,8 +3,8 @@
 @extends('layouts.new')
 
 @section('content')
-    @component('components.gestion.create', [
-        'title' => 'Editar Mesa',
+    @component('components.gestion.edit', [
+        'resource' => 'Mesa',
         'action' => route('mesas.update', $mesa),
         'method' => 'PUT',
         'buttonText' => 'Actualizar Mesa',

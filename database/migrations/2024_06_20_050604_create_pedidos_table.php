@@ -16,7 +16,9 @@ class CreatePedidosTable extends Migration
             $table->enum('estado', ['pendiente', 'enProceso', 'completado', 'entregado'])->default('pendiente');
             $table->enum('tipo', ['paraLlevar', 'enLocal']);
             $table->foreignId('idMesa')->nullable()->constrained('mesas','idMesa');
-            $table->foreignId('idCuentaCliente')->nullable()->constrained('cuenta_clientes','idCuentaCliente');
+            $table->foreignId('user_id')->constrained('users','id');
+            $table->foreignId('idCuenta')->constrained('cuentas','idCuenta');
+            $table->foreignId('idPedidoPlatillo')->constrained('pedido_platillos','idPedidoPlatillo');
             $table->timestamps();
         });
     }
@@ -25,7 +27,7 @@ class CreatePedidosTable extends Migration
      * Reverse the migrations.
      */
     public function down(): void
-    {
-        Schema::dropIfExists('pedidos');
+    {     
+        Schema::dropIfExists('pedidos');      
     }
 };

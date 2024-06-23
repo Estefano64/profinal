@@ -9,17 +9,39 @@ class Cuenta extends Model
 {
     use HasFactory;
 
-    protected $primarykey='idCuenta';
+    protected $primaryKey = 'idCuenta';
 
-    protected $fillable = ['totalPagar', 'idCuentaCliente', 'idMetodoPago', 'estado'];
+    protected $fillable = ['idCuentaCliente', 'idMetodoPago', 'estado', 'subtotal', 'impuesto', 'total'];
 
-    public function cuentaCliente()
+
+    public static function boot()
     {
-        return $this->belongsTo(CuentaCliente::class, 'idCuentaCliente');
+        parent::boot();
+
+        static::creating(function ($cuenta) {
+            $cuenta->calculateTotals();
+        });
+
+        static::updating(function ($cuenta) {
+            $cuenta->calculateTotals();
+        });
     }
 
-    public function metodoPago()
+    public function pedidos()
     {
-        return $this->belongsTo(MetodoPago::class, 'idMetodoPago');
+        return $this->hasMany(Pedido::class, 'idCuenta');
+    }
+
+    public function calculateTotals()
+    {
+        $subtotal = $this->pedidos()->with('platillos')->get()->sum(function ($pedido) {
+            return $pedido->platillos->sum(function ($platillo) {
+                return $platillo->pivot->total;
+            });
+        });
+
+        $this->subtotal = $subtotal;
+        $this->impuesto = $subtotal * 0.18; // Calcula el impuesto como el 18% del subtotal
+        $this->total = $subtotal + $this->impuesto; // Calcula el total como subtotal + impuesto
     }
 }

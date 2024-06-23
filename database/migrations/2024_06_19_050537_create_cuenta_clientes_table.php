@@ -14,7 +14,7 @@ class CreateCuentaClientesTable extends Migration
         Schema::create('cuenta_clientes', function (Blueprint $table) {
             $table->id('idCuentaCliente');
             $table->string('nombre', 50);
-            $table->string('dni', 8);
+            $table->string('dni', 8)->unique();
             $table->timestamps();
         });
     }

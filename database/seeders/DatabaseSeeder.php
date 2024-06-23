@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory(10)->create();
         \App\Models\Mesa::factory(5)->create();
         \App\Models\Platillo::factory(20)->create();
+        \App\Models\PedidoPlatillo::factory(10)->create();
         \App\Models\CuentaCliente::factory(10)->create();
         \App\Models\MetodoPago::factory(5)->create();
 
@@ -32,8 +33,5 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\Pedido::factory(20)->create();
 
-        \App\Models\Factura::factory(10)->create();
-
-        \App\Models\PedidoPlatillo::factory(10)->create();
     }
 }

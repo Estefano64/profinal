@@ -15,8 +15,17 @@
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-nav-link href="{{ route('mesas.index') }}" :active="request()->routeIs('books.index')">
+                    <x-nav-link href="{{ route('mesas.index') }}" :active="request()->routeIs('mesas.index')">
                                     {{ __('Mesas') }}
+                     </x-nav-link>
+                     <x-nav-link href="{{ route('platillos.index') }}" :active="request()->routeIs('platillos.index')">
+                                    {{ __('Platos') }}
+                     </x-nav-link>
+                     <x-nav-link href="{{ route('cuentaClientes.index') }}" :active="request()->routeIs('cuentaClientes.index')">
+                                    {{ __('Clientes') }}
+                     </x-nav-link>
+                     <x-nav-link href="{{ route('metodoPagos.index') }}" :active="request()->routeIs('metodoPagos.index')">
+                                    {{ __('MétodosPago') }}
                      </x-nav-link>
                 </div>
             </div>
@@ -146,7 +155,21 @@
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
         </div>
-
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link href="{{ route('mesas.index') }}" :active="request()->routeIs('dashboard')">
+                {{ __('Mesas') }}
+            </x-responsive-nav-link>
+        </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link href="{{ route('platillos.index') }}" :active="request()->routeIs('dashboard')">
+                {{ __('Platos') }}
+            </x-responsive-nav-link>
+        </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link href="{{ route('cuentaClientes.index') }}" :active="request()->routeIs('cuentaClientes.index')">
+                {{ __('Clientes') }}
+            </x-responsive-nav-link>
+        </div>
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
             <div class="flex items-center px-4">

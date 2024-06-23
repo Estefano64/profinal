@@ -1,9 +1,13 @@
 <!-- resources/views/components/form.blade.php -->
-
+@if(session('error'))
+            <div class="bg-red-500 text-white p-4 rounded mb-4">
+                {{ session('error') }}
+            </div>
+        @endif
 <div class="bg-white border border-4 rounded-lg shadow relative m-10">
     <div class="flex items-start justify-between p-5 border-b rounded-t">
         <h3 class="text-xl font-semibold">
-            {{ $title }}
+        Crear {{ $resource }}
         </h3>
     </div>
     <div class="p-6 space-y-6">
@@ -34,3 +38,5 @@
         </form>
     </div>
 </div>
+
+

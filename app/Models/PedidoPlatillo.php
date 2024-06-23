@@ -11,13 +11,21 @@ class PedidoPlatillo extends Model
 
     protected $table = 'pedido_platillos';
 
-    protected $primarykey='idPedidoPlatillo';
+    protected $primaryKey='idPedidoPlatillo';
 
-    protected $fillable = ['idPedido', 'idPlatillo', 'cantidad'];
+    protected $fillable = ['idPlatillo', 'cantidad','nota','total'];
 
-    public function pedido()
+    protected static function booted()
     {
-        return $this->belongsTo(Pedido::class, 'idPedido');
+        static::creating(function ($pedidoPlatillo) {
+            $platillo = Platillo::find($pedidoPlatillo->idPlatillo);
+            $pedidoPlatillo->total = $platillo->precio * $pedidoPlatillo->cantidad;
+        });
+
+        static::updating(function ($pedidoPlatillo) {
+            $platillo = Platillo::find($pedidoPlatillo->idPlatillo);
+            $pedidoPlatillo->total = $platillo->precio * $pedidoPlatillo->cantidad;
+        });
     }
 
     /**

@@ -4,7 +4,7 @@
 
 @section('content')
     @component('components.gestion.create', [
-        'title' => 'Crear Nueva Mesa',
+        'resource' => 'Mesa',
         'action' => route('mesas.store'),
         'method' => 'POST',
         'buttonText' => 'Crear Mesa',

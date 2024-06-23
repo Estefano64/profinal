@@ -20,9 +20,9 @@ class PedidoPlatilloFactory extends Factory
     public function definition(): array
     {
         return [
-            'idPedido' => Pedido::inRandomOrder()->first()->idPedido,
-        'idPlatillo' => Platillo::inRandomOrder()->first()->idPlatillo,
-        'cantidad' => $this->faker->numberBetween(1, 5),
+            'idPlatillo' => Platillo::inRandomOrder()->first()->idPlatillo,
+            'cantidad' => $this->faker->numberBetween(1, 5),
+            'nota' => $this->faker->sentence(5),
         ];
     }
 }
