@@ -1,11 +1,14 @@
-@extends('layouts.show')
+@extends('layouts.inicio')
 
 @section('content')
 
+<x-mainpage.homeCarousel>
 
-@include('components.carousel')
+</x-mainpage.homeCarousel>
+
 @include('components.mainpage.bodyhome')
 
 
 
 @endsection
+

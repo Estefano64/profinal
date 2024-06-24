@@ -74,3 +74,7 @@ Route::get('/comboPareja', function () {
 Route::get('/comboFamiliar', function () {
     return view('mainpage.comboFamiliar');
 })->name('comboFamiliar');
+
+
+
+//rutas para el navBar
