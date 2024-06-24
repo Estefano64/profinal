@@ -13,12 +13,12 @@ class CreateCuentasTable extends Migration
     {
         Schema::create('cuentas', function (Blueprint $table) {
             $table->id('idCuenta');
-            $table->foreignId('idCuentaCliente')->constrained('cuenta_clientes','idCuentaCliente');
-            $table->foreignId('idMetodoPago')->constrained('metodo_pagos','idMetodoPago');
+            $table->foreignId('idMetodoPago')->nullable()->constrained('metodo_pagos', 'idMetodoPago');
+            $table->foreignId('idCuentaCliente')->nullable()->constrained('cuenta_clientes', 'idCuentaCliente');
             $table->enum('estado', ['pagado', 'pendiente'])->default('pendiente');           
-            $table->decimal('subtotal', 6, 2);
-            $table->decimal('impuesto', 6, 2);
-            $table->decimal('total', 6, 2);
+            $table->decimal('subtotal', 6, 2)->default(0.00);
+            $table->decimal('impuesto', 6, 2)->default(0.00);
+            $table->decimal('total', 6, 2)->default(0.00);
             $table->timestamps();
         });
     }

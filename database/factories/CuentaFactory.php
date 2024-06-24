@@ -22,7 +22,10 @@ class CuentaFactory extends Factory
         return [
             'idCuentaCliente' => CuentaCliente::inRandomOrder()->first()->idCuentaCliente,
         'idMetodoPago' => MetodoPago::inRandomOrder()->first()->idMetodoPago,
-            'estado' => $this->faker->randomElement(['pagado', 'pendiente'])
+            'estado' => $this->faker->randomElement(['pagado', 'pendiente']),
+            'impuesto' => $this->faker->randomFloat(2, 5, 100),
+            'total' => $this->faker->randomFloat(2, 5, 100)
+
         ];
     }
 }

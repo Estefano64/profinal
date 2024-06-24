@@ -36,4 +36,9 @@ class PedidoPlatillo extends Model
         return $this->belongsTo(Platillo::class, 'idPlatillo');
     }
 
+    public function pedido()
+    {
+        return $this->belongsTo(Pedido::class, 'idPedido');
+    }
+
 }

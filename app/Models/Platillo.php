@@ -12,4 +12,9 @@ class Platillo extends Model
     protected $primaryKey='idPlatillo';
 
     protected $fillable = ['nombre', 'descripcion', 'precio'];
+
+    public function pedidoPlatillos()
+    {
+        return $this->hasMany(PedidoPlatillo::class, 'idPlatillo', 'idPlatillo');
+    }
 }
