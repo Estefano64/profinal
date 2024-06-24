@@ -10,7 +10,7 @@
 
 <main class="max-w-4xl mx-auto px-4 py-8">
 
-    <div class="flex flex-col md:flex-row items-center justify-start mb-12">
+    <div class="mt-20 flex flex-col md:flex-row items-center justify-start mb-12">
 
         <div class="flex-shrink-0 mb-6 md:mb-0 md:mr-6">
             <img src="{{ asset('images/image.png') }}" alt="Imagen de la pollería" class="w-full md:w-96 h-auto rounded-lg shadow-md">

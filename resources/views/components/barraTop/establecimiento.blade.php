@@ -1,6 +1,6 @@
 <!-- Visit us section -->
 <section class="bg-gray-100">
-    <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:py-20 lg:px-8">
+    <div class="mt-20 max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:py-20 lg:px-8">
         <div class="max-w-2xl lg:max-w-4xl mx-auto text-center">
             <h2 class="text-3xl font-extrabold text-gray-900" id="contactUs">Visitanos en Nuestro Local</h2>
             <p class="mt-3 text-lg text-gray-500">

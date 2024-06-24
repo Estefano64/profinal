@@ -1,4 +1,4 @@
-<div class="bg-white shadow overflow-hidden sm:rounded-lg">
+<div class="mt-20 bg-white shadow overflow-hidden sm:rounded-lg">
     <div class="px-4 py-5 sm:px-6">
         <h1 class="text-lg leading-6 font-medium text-gray-900">Pollería Miguelón</h1>
         <h3 class="text-lg leading-6 font-medium text-gray-900 mt-2">Información de Contacto:</h3>
