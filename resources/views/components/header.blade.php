@@ -2,7 +2,6 @@
     <div class="flex items-center justify-between">
         <a href="{{ route('home') }}" class="mr-4 flex items-center py-1.5 font-sans text-base font-medium leading-relaxed text-black antialiased">
             <img src="{{ asset('images/logoHeader.png') }}" alt="Logo de Polleria Miguelon" class="h-16 w-auto mr-2">
-          
         </a>
         <div class="flex items-center gap-4">
             <div class="hidden lg:block">
@@ -13,17 +12,17 @@
                         </a>
                     </li>
                     <li class="p-1 font-sans text-sm font-normal leading-normal text-black">
-                        <a href="#" class="flex items-center">
-                             Establecimiento
-                        </a>
+                    <a href="{{ route('establecimiento') }}" class="flex items-center">
+                            Establecimiento
+                         </a>
                     </li>
                     <li class="p-1 font-sans text-sm font-normal leading-normal text-black">
-                        <a href="#" class="flex items-center">
-                              Quiénes somos
-                        </a>
+                        <a href="{{ route('quienes-somos') }}" class="flex items-center">
+                            Quiénes somos
+                         </a>
                     </li>
                     <li class="p-1 font-sans text-sm font-normal leading-normal text-black">
-                        <a href="#" class="flex items-center">
+                        <a href="{{ route('contacto') }}" class="flex items-center">
                             Contacto
                         </a>
                     </li>

@@ -74,3 +74,19 @@ Route::get('/comboPareja', function () {
 Route::get('/comboFamiliar', function () {
     return view('mainpage.comboFamiliar');
 })->name('comboFamiliar');
+
+Route::get('/menu', function () {
+    return view('mainpage.barraTop.menu');
+})->name('menu');
+
+Route::get('/establecimiento', function () {
+    return view('mainpage.barraTop.establecimiento');
+})->name('establecimiento');
+
+Route::get('/quienes-somos', function () {
+    return view('mainpage.barraTop.quienesSomos');
+})->name('quienes-somos');
+
+Route::get('/contacto', function () {
+    return view('mainpage.barraTop.contacto');
+})->name('contacto');
