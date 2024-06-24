@@ -27,6 +27,12 @@
                      <x-nav-link href="{{ route('metodoPagos.index') }}" :active="request()->routeIs('metodoPagos.index')">
                                     {{ __('MétodosPago') }}
                      </x-nav-link>
+                     <x-nav-link href="{{ route('pedidos.index') }}" :active="request()->routeIs('pedidos.index')">
+                                    {{ __('Listado pedidos') }}
+                     </x-nav-link>
+                     <x-nav-link href="{{ route('cuentas.index') }}" :active="request()->routeIs('cuentas.index')">
+                                    {{ __('Crear y gestionar cuenta') }}
+                     </x-nav-link>
                 </div>
             </div>
 
@@ -168,6 +174,21 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link href="{{ route('cuentaClientes.index') }}" :active="request()->routeIs('cuentaClientes.index')">
                 {{ __('Clientes') }}
+            </x-responsive-nav-link>
+        </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link href="{{ route('metodoPagos.index') }}" :active="request()->routeIs('metodoPagos.index')">
+                {{ __('MétodosPago') }}
+            </x-responsive-nav-link>
+        </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link href="{{ route('pedidos.index') }}" :active="request()->routeIs('pedidos.index')">
+                {{ __('Listado pedidos') }}
+            </x-responsive-nav-link>
+        </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link href="{{ route('cuentas.index') }}" :active="request()->routeIs('cuentas.index')">
+                {{ __('Crear y gestionar cuenta') }}
             </x-responsive-nav-link>
         </div>
         <!-- Responsive Settings Options -->

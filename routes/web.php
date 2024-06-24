@@ -5,6 +5,9 @@ use App\Http\Controllers\MesaController;
 use App\Http\Controllers\PlatilloController;
 use App\Http\Controllers\CuentaClienteController;
 use App\Http\Controllers\MetodoPagoController;
+use App\Http\Controllers\PedidoController;
+use App\Http\Controllers\CuentaController;
+use App\Http\Controllers\PedidoPlatilloController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -25,6 +28,9 @@ Route::middleware('auth')->group(function () {
     Route::resource('platillos', PlatilloController::class);
     Route::resource('cuentaClientes', CuentaClienteController::class);
     Route::resource('metodoPagos', MetodoPagoController::class);
+    Route::resource('pedidos', PedidoController::class);
+    Route::resource('cuentas', CuentaController::class);
+    Route::resource('pedidoPlatillos', PedidoPlatilloController::class);
 });
 
 Route::get('/home', function () {
@@ -77,4 +83,22 @@ Route::get('/comboFamiliar', function () {
 
 
 
+
 //rutas para el navBar
+
+Route::get('/menu', function () {
+    return view('mainpage.barraTop.menu');
+})->name('menu');
+
+Route::get('/establecimiento', function () {
+    return view('mainpage.barraTop.establecimiento');
+})->name('establecimiento');
+
+Route::get('/quienes-somos', function () {
+    return view('mainpage.barraTop.quienesSomos');
+})->name('quienes-somos');
+
+Route::get('/contacto', function () {
+    return view('mainpage.barraTop.contacto');
+})->name('contacto');
+

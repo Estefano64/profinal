@@ -35,7 +35,8 @@
                         <td class="px-6 py-4">{{ $item->$key }}</td>
                     @endforeach
                     <td class="px-6 py-4">
-                        <a href="{{ route($editRoute, $item) }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Editar</a>
+                        <a href="{{ route('pedidoPlatillos.create', ['idCuenta' => $item->idCuenta]) }}" class="font-medium text-green-600 dark:text-green-500 hover:underline ml-3">Agregar Pedido</a>
+                        <a href="{{ route($editRoute, $item) }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Finalizar</a>
                         <form action="{{ route($deleteRoute, $item) }}" method="POST" class="inline" onsubmit="return confirm('¿Está seguro que desea eliminar este elemento?');">
                         @csrf
                         @method('DELETE')
