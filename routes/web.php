@@ -10,7 +10,7 @@ use App\Http\Controllers\CuentaController;
 use App\Http\Controllers\PedidoPlatilloController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::middleware([

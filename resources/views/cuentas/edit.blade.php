@@ -16,7 +16,7 @@
                 })->toArray()
             ],
 
-            ['name' => 'subtotal', 'label' => 'Subtotal', 'type' => 'number', 'step' => '0.01', 'value' => $cuenta->subtotal],
+            ['name' => 'subtotal', 'label' => 'Subtotal', 'type' => 'number', 'step' => '0.01', 'value' => $cuenta->subtotal, 'readonly' => true],
             ['name' => 'idMetodoPago', 'label' => 'Método de Pago', 'type' => 'select',
             'options' => $metodosPago->map(function($metodosPago) {
                     return [
@@ -25,12 +25,12 @@
                     ];
                 })->toArray()
             ],
-            ['name' => 'impuesto', 'label' => 'Impuesto', 'type' => 'number', 'step' => '0.01', 'value' => $cuenta->impuesto],
+            ['name' => 'impuesto', 'label' => 'Impuesto', 'type' => 'number', 'step' => '0.01', 'value' => $cuenta->impuesto, 'readonly' => true],
             ['name' => 'estado', 'label' => 'Estado', 'type' => 'select', 'options' => [
                 ['value' => 'pagado', 'label' => 'Pagado'],
                 ['value' => 'pendiente', 'label' => 'Pendiente']
             ], 'value' => $cuenta->estado],         
-            ['name' => 'total', 'label' => 'Total', 'type' => 'number', 'step' => '0.01', 'value' => $cuenta->total]
+            ['name' => 'total', 'label' => 'Total', 'type' => 'number', 'step' => '0.01', 'value' => $cuenta->total, 'readonly' => true]
         ]
     ])
     @endcomponent
