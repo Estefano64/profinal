@@ -33,6 +33,9 @@
                      <x-nav-link href="{{ route('cuentas.index') }}" :active="request()->routeIs('cuentas.index')">
                                     {{ __('Crear y gestionar cuenta') }}
                      </x-nav-link>
+                     <x-nav-link href="{{ route('users.index') }}" :active="request()->routeIs('users.index')">
+                                    {{ __('Empleados') }}
+                     </x-nav-link>
                 </div>
             </div>
 
@@ -189,6 +192,11 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link href="{{ route('cuentas.index') }}" :active="request()->routeIs('cuentas.index')">
                 {{ __('Crear y gestionar cuenta') }}
+            </x-responsive-nav-link>
+        </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link href="{{ route('users.index') }}" :active="request()->routeIs('users.index')">
+                {{ __('Empleados') }}
             </x-responsive-nav-link>
         </div>
         <!-- Responsive Settings Options -->

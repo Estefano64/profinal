@@ -8,6 +8,7 @@ use App\Http\Controllers\MetodoPagoController;
 use App\Http\Controllers\PedidoController;
 use App\Http\Controllers\CuentaController;
 use App\Http\Controllers\PedidoPlatilloController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('home');
@@ -31,6 +32,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('pedidos', PedidoController::class);
     Route::resource('cuentas', CuentaController::class);
     Route::resource('pedidoPlatillos', PedidoPlatilloController::class);
+    Route::resource('users', UserController::class);
 });
 
 Route::get('/home', function () {
