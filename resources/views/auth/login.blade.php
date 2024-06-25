@@ -45,12 +45,6 @@
                     <div class="mt-8">
                         <button class="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600">{{ __('Log in') }}</button>
                     </div>
-
-                    <div class="mt-4 flex items-center justify-between">
-                        <span class="border-b w-1/5 md:w-1/4"></span>
-                        <a href="{{ route('register') }}" class="text-xs text-gray-500 uppercase">or sign up</a>
-                        <span class="border-b w-1/5 md:w-1/4"></span>
-                    </div>
                 </form>
             </div>
         </div>
