@@ -104,11 +104,5 @@ Route::get('/contacto', function () {
     return view('mainpage.barraTop.contacto');
 })->name('contacto');
 
-Route::get('/login', function () {
-    return view('auth.login');
-})->name('login');
 
-Route::get('/register', function () {
-    return view('auth.register');
-})->name('register');
 

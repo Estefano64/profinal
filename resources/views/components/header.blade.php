@@ -11,11 +11,6 @@
             <div class="hidden lg:block">
                 <ul class="flex gap-6">
                     <li class="p-1 font-sans text-sm font-normal leading-normal text-black">
-                        <a href="#" class="flex items-center">
-                            Reservas
-                        </a>
-                    </li>
-                    <li class="p-1 font-sans text-sm font-normal leading-normal text-black">
 
 
 
@@ -36,6 +31,7 @@
                     </li>
                 </ul>
             </div>
+
             
             <div class="flex items-center gap-2">
             <a href="{{ route('register') }}" class="px-4 py-2 text-xs font-bold uppercase text-black transition-all rounded-lg hover:bg-gray-900/10 active:bg-gray-900/20 lg:inline-block">
@@ -45,6 +41,7 @@
                 Iniciar Sesión
             </a>
             </div>
+
 
             <button class="lg:hidden ml-auto h-6 w-6 text-black" type="button">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2">

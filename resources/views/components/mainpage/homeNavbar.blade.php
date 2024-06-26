@@ -27,11 +27,6 @@
 
                 <div class="flex items-center gap-2">
 
-                <button>
-                    <a href="{{ route('register') }}" class="hidden px-4 py-2 text-xs font-bold uppercase text-black transition-all rounded-lg hover:bg-gray-900/10 active:bg-gray-900/20 lg:inline-block" type="button">
-                        registrarnos
-                    </a>
-                </button>
 
                 <button>
                     <a href="{{ route('login') }}" class="hidden px-4 py-2 text-xs font-bold uppercase text-white bg-gradient-to-tr from-gray-900 to-gray-800 rounded-lg shadow-md transition-all hover:shadow-lg active:opacity-85 lg:inline-block" type="button">
