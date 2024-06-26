@@ -1,5 +1,5 @@
 <x-mainpage.partes.titlePage>
-    
+
     Combos exclusivos para ti y para mi
 </x-mainpage.partes.titlePage>
 
@@ -11,15 +11,18 @@
         </x-slot>
 
         <x-slot name="img">
-            {{ asset('imghome/comboparados.jpg') }}
+            {{ asset('imghome/platillos/mediopollo.png') }}
         </x-slot>
-        COMBOS PARA 2
+        1/2 POLLO CLÁSICO
 
         <x-slot name="description">
-            esta es una descripcion de combos para dos
+
+            Pollo + papas fritas + aguadito + ensalada
+
+
         </x-slot>
         <x-slot name="price">
-            s/39.99
+            s/32.99
         </x-slot>
 
     </x-mainpage.partes.card>
@@ -30,15 +33,18 @@
         </x-slot>
 
         <x-slot name="img">
-            {{ asset('imghome/comboparados.jpg') }}
+            {{ asset('imghome/platillos/mediomiguelon.png') }}
         </x-slot>
-        COMBOS PARA 2
+        1/2 POLLO MIGUELÓN
+
+
+
 
         <x-slot name="description">
-            esta es una descripcion de combos para dos
+            Pollo + papa andina ó papa criolla + aguadito + mollejitas fritas + chorizo + ensalada
         </x-slot>
         <x-slot name="price">
-            s/39.99
+            s/37.99
         </x-slot>
 
     </x-mainpage.partes.card>
@@ -49,75 +55,20 @@
         </x-slot>
 
         <x-slot name="img">
-            {{ asset('imghome/comboparados.jpg') }}
+            {{ asset('imghome/platillos/mediopollocombinado.png') }}
         </x-slot>
-        COMBOS PARA 2
+        1/2 POLLO COMBINADO
 
         <x-slot name="description">
-            esta es una descripcion de combos para dos
+            Pollo + papas fritas + aguadito + ensalada
         </x-slot>
         <x-slot name="price">
-            s/39.99
+            s/32.99
         </x-slot>
 
     </x-mainpage.partes.card>
 
-    <x-mainpage.partes.card>
-        <x-slot name="link">
-            {{ route('comboPareja')}}
-        </x-slot>
 
-        <x-slot name="img">
-            {{ asset('imghome/comboparados.jpg') }}
-        </x-slot>
-        COMBOS PARA 2
-
-        <x-slot name="description">
-            esta es una descripcion de combos para dos
-        </x-slot>
-        <x-slot name="price">
-            s/39.99
-        </x-slot>
-
-    </x-mainpage.partes.card>
-
-    <x-mainpage.partes.card>
-        <x-slot name="link">
-            {{ route('comboPareja')}}
-        </x-slot>
-
-        <x-slot name="img">
-            {{ asset('imghome/comboparados.jpg') }}
-        </x-slot>
-        COMBOS PARA 2
-
-        <x-slot name="description">
-            esta es una descripcion de combos para dos
-        </x-slot>
-        <x-slot name="price">
-            s/39.99
-        </x-slot>
-
-    </x-mainpage.partes.card>
-
-    <x-mainpage.partes.card>
-        <x-slot name="link">
-            {{ route('comboPareja')}}
-        </x-slot>
-
-        <x-slot name="img">
-            {{ asset('imghome/comboparados.jpg') }}
-        </x-slot>
-        COMBOS PARA 2
-
-        <x-slot name="description">
-            esta es una descripcion de combos para dos
-        </x-slot>
-        <x-slot name="price">
-            s/39.99
-        </x-slot>
-
-    </x-mainpage.partes.card>
 
 
 

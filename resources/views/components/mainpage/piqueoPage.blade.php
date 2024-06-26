@@ -10,14 +10,37 @@
         </x-slot>
 
         <x-slot name="img">
-            {{ asset('imghome/salchipapa.png') }}
+            {{ asset('imghome/platillos/salchipaparoyal.png') }}
         </x-slot>
-        SALCHIPAPA
+        SALCHIPAPA ROYAL
+
+
+
         <x-slot name="description">
-            esta es una descripcion de salchipapa
+        papa + huevo + hot dog + ensalada
         </x-slot>
         <x-slot name="price">
-            s/14.99
+            s/8.99
+        </x-slot>
+    </x-mainpage.partes.card>
+
+    <x-mainpage.partes.card>
+        <x-slot name="link">
+            {{ route('piqueos')}}
+        </x-slot>
+
+        <x-slot name="img">
+            {{ asset('imghome/platillos/salchipapa.png') }}
+        </x-slot>
+        SALCHIPAPA CLÁSICA
+
+
+
+        <x-slot name="description">
+        papa + hot dog
+        </x-slot>
+        <x-slot name="price">
+            s/6.99
         </x-slot>
     </x-mainpage.partes.card>
 
@@ -29,12 +52,14 @@
         <x-slot name="img">
             {{ asset('imghome/salchipapa.png') }}
         </x-slot>
-        SALCHIPAPA
+        SALCHIPAPA COMBINADO AL GUSTO
+
+
         <x-slot name="description">
-            esta es una descripcion de salchipapa
+        papa + hot dog
         </x-slot>
         <x-slot name="price">
-            s/14.99
+            s/7.99
         </x-slot>
     </x-mainpage.partes.card>
 
@@ -44,14 +69,14 @@
         </x-slot>
 
         <x-slot name="img">
-            {{ asset('imghome/salchipapa.png') }}
+            {{ asset('imghome/platillos/salchipapa-andina.png') }}
         </x-slot>
-        SALCHIPAPA
+        SALCHIPAPA CON PAPITAS ANDINAS
         <x-slot name="description">
-            esta es una descripcion de salchipapa
+        papa + hot dog
         </x-slot>
         <x-slot name="price">
-            s/14.99
+            s/6.99
         </x-slot>
     </x-mainpage.partes.card>
 
@@ -61,51 +86,34 @@
         </x-slot>
 
         <x-slot name="img">
-            {{ asset('imghome/salchipapa.png') }}
+            {{ asset('imghome/platillos/mollejitas.png') }}
         </x-slot>
-        SALCHIPAPA
+        MOLLEJITAS FRITAS 
         <x-slot name="description">
-            esta es una descripcion de salchipapa
+        mollejitas fritas + papa + ensalada
         </x-slot>
         <x-slot name="price">
-            s/14.99
-        </x-slot>
-    </x-mainpage.partes.card>
-
-    <x-mainpage.partes.card>
-        <x-slot name="link">
-            {{ route('piqueos')}}
-        </x-slot>
-
-        <x-slot name="img">
-            {{ asset('imghome/salchipapa.png') }}
-        </x-slot>
-        SALCHIPAPA
-        <x-slot name="description">
-            esta es una descripcion de salchipapa
-        </x-slot>
-        <x-slot name="price">
-            s/14.99
-        </x-slot>
-    </x-mainpage.partes.card>
-
-    <x-mainpage.partes.card>
-        <x-slot name="link">
-            {{ route('piqueos')}}
-        </x-slot>
-
-        <x-slot name="img">
-            {{ asset('imghome/salchipapa.png') }}
-        </x-slot>
-        SALCHIPAPA
-        <x-slot name="description">
-            esta es una descripcion de salchipapa
-        </x-slot>
-        <x-slot name="price">
-            s/14.99
+            s/12.99
         </x-slot>
     </x-mainpage.partes.card>
     
+    <x-mainpage.partes.card>
+        <x-slot name="link">
+            {{ route('piqueos')}}
+        </x-slot>
+
+        <x-slot name="img">
+            {{ asset('imghome/platillos/mollejitascombinado.png') }}
+        </x-slot>
+        MOLLEJITAS FRITAS 
+        <x-slot name="description">
+        mollejitas fritas + combinado
+        </x-slot>
+        <x-slot name="price">
+            s/12.99
+        </x-slot>
+    </x-mainpage.partes.card>
+
 
 
 

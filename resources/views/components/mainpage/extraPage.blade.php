@@ -10,14 +10,16 @@
         </x-slot>
 
         <x-slot name="img">
-            {{ asset('imghome/extras.jpg') }}
+            {{ asset('imghome/platillos/aguadito.png') }}
         </x-slot>
-        extras
+        AGUADITO EXTRA
+
+
         <x-slot name="description">
-            esta es una descripcion de extras
+        AGUADITO EXTRA
         </x-slot>
         <x-slot name="price">
-            s/24.99
+            s/6.99
         </x-slot>
     </x-mainpage.partes.card>
 
@@ -27,14 +29,16 @@
         </x-slot>
 
         <x-slot name="img">
-            {{ asset('imghome/extras.jpg') }}
+            {{ asset('imghome/platillos/caldo-gallina.jpg') }}
         </x-slot>
-        extras
+        CALDO DE GALLINA
+
+
         <x-slot name="description">
-            esta es una descripcion de extras
+        CALDO DE GALLINA
         </x-slot>
         <x-slot name="price">
-            s/24.99
+            s/11.99
         </x-slot>
     </x-mainpage.partes.card>
 
@@ -44,14 +48,16 @@
         </x-slot>
 
         <x-slot name="img">
-            {{ asset('imghome/extras.jpg') }}
+            {{ asset('imghome/platillos/hotdog.png') }}
         </x-slot>
-        extras
+        SANDWICH DE HOT DOG
+
+
         <x-slot name="description">
-            esta es una descripcion de extras
+        SANDWICH DE HOT DOG
         </x-slot>
         <x-slot name="price">
-            s/24.99
+            s/3.99
         </x-slot>
     </x-mainpage.partes.card>
 
@@ -61,50 +67,18 @@
         </x-slot>
 
         <x-slot name="img">
-            {{ asset('imghome/extras.jpg') }}
+            {{ asset('imghome/platillos/hamburguesa.png') }}
         </x-slot>
-        extras
+        SANDWICH DE HAMBURGUESA
         <x-slot name="description">
-            esta es una descripcion de extras
+        SANDWICH DE HAMBURGUESA
         </x-slot>
         <x-slot name="price">
-            s/24.99
+            s/4.99
         </x-slot>
     </x-mainpage.partes.card>
 
-    <x-mainpage.partes.card>
-        <x-slot name="link">
-            {{ route('extras')}}
-        </x-slot>
-
-        <x-slot name="img">
-            {{ asset('imghome/extras.jpg') }}
-        </x-slot>
-        extras
-        <x-slot name="description">
-            esta es una descripcion de extras
-        </x-slot>
-        <x-slot name="price">
-            s/24.99
-        </x-slot>
-    </x-mainpage.partes.card>
-
-    <x-mainpage.partes.card>
-        <x-slot name="link">
-            {{ route('extras')}}
-        </x-slot>
-
-        <x-slot name="img">
-            {{ asset('imghome/extras.jpg') }}
-        </x-slot>
-        extras
-        <x-slot name="description">
-            esta es una descripcion de extras
-        </x-slot>
-        <x-slot name="price">
-            s/24.99
-        </x-slot>
-    </x-mainpage.partes.card>
+    
 
 </section>
 

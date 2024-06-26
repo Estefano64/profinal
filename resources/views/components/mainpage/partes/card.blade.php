@@ -11,9 +11,7 @@
         </div>
     </a>
 
-    <x-mainpage.partes.buyButton>
 
-    </x-mainpage.partes.buyButton>
 
 
 </div>

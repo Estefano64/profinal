@@ -10,14 +10,14 @@
         </x-slot>
 
         <x-slot name="img">
-            {{ asset('imghome/combopersonal.png') }}
+            {{ asset('imghome/platillos/cuartopollomiguelon.png') }}
         </x-slot>
-        COMBO PERSONAL
+        1/4 DE POLLO MIGUELON
         <x-slot name="description">
-            esta es una descripcion de combos Personales
+            Pollo + papa andina ó papa criolla + aguadito + mollejitas fritas + chorizo + ensalada
         </x-slot>
         <x-slot name="price">
-            s/19.99
+            s/22.99
         </x-slot>
     </x-mainpage.partes.card>
 
@@ -27,14 +27,14 @@
         </x-slot>
 
         <x-slot name="img">
-            {{ asset('imghome/combopersonal.png') }}
+            {{ asset('imghome/platillos/octavomiguelon.png') }}
         </x-slot>
-        COMBO PERSONAL
+        1/8 POLLO MIGUELÓN
         <x-slot name="description">
-            esta es una descripcion de combos Personales
+        Pollo + papa andina ó papa criolla + aguadito + mollejitas fritas + chorizo + ensalada
         </x-slot>
         <x-slot name="price">
-            s/19.99
+            s/17.99
         </x-slot>
     </x-mainpage.partes.card>
 
@@ -44,14 +44,15 @@
         </x-slot>
 
         <x-slot name="img">
-            {{ asset('imghome/combopersonal.png') }}
+            {{ asset('imghome/platillos/octavocombinado.png') }}
         </x-slot>
-        COMBO PERSONAL
+        1/8 POLLO COMBINADO
         <x-slot name="description">
-            esta es una descripcion de combos Personales
+        
+        1/4 Pollo + papas fritas + arroz chaufa + tallarin + hot dog
         </x-slot>
         <x-slot name="price">
-            s/19.99
+            s/12.99
         </x-slot>
     </x-mainpage.partes.card>
 
@@ -61,14 +62,14 @@
         </x-slot>
 
         <x-slot name="img">
-            {{ asset('imghome/combopersonal.png') }}
+            {{ asset('imghome/platillos/cuartopollo.png') }}
         </x-slot>
-        COMBO PERSONAL
-        <x-slot name="description">
-            esta es una descripcion de combos Personales
+        1/4 POLLO CLÁSICO
+        <x-slot name="description">    
+        Pollo + papas fritas + aguadito + ensalada
         </x-slot>
         <x-slot name="price">
-            s/19.99
+            s/17.99
         </x-slot>
     </x-mainpage.partes.card>
 
@@ -78,16 +79,19 @@
         </x-slot>
 
         <x-slot name="img">
-            {{ asset('imghome/combopersonal.png') }}
+            {{ asset('imghome/platillos/octavopollo.png') }}
         </x-slot>
-        COMBO PERSONAL
+        1/8 POLLO CLÁSICO
         <x-slot name="description">
-            esta es una descripcion de combos Personales
+        
+        Pollo + papas fritas + aguadito + ensalada
         </x-slot>
         <x-slot name="price">
-            s/19.99
+            s/11.99
         </x-slot>
     </x-mainpage.partes.card>
+
+
 
     <x-mainpage.partes.card>
         <x-slot name="link">

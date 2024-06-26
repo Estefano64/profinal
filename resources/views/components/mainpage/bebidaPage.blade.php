@@ -10,14 +10,14 @@
         </x-slot>
 
         <x-slot name="img">
-            {{ asset('imghome/bebidas.jpg') }}
+            {{ asset('imghome/platillos/te.png') }}
         </x-slot>
-        bebidas
+        TÉ
         <x-slot name="description">
-            esta es una descripcion de bebidas
+        vazo/taza
         </x-slot>
         <x-slot name="price">
-            s/19.99
+            s/1.99
         </x-slot>
     </x-mainpage.partes.card>
 
@@ -27,14 +27,14 @@
         </x-slot>
 
         <x-slot name="img">
-            {{ asset('imghome/bebidas.jpg') }}
+            {{ asset('imghome/platillos/mate.png') }}
         </x-slot>
-        bebidas
+        MATE
         <x-slot name="description">
-            esta es una descripcion de bebidas
+        vazo/taza
         </x-slot>
         <x-slot name="price">
-            s/19.99
+            s/1.99
         </x-slot>
     </x-mainpage.partes.card>
 
@@ -44,14 +44,14 @@
         </x-slot>
 
         <x-slot name="img">
-            {{ asset('imghome/bebidas.jpg') }}
+            {{ asset('imghome/platillos/tecacao.png') }}
         </x-slot>
-        bebidas
+        MATE DE CACAO
         <x-slot name="description">
-            esta es una descripcion de bebidas
+            vazo/taza
         </x-slot>
         <x-slot name="price">
-            s/19.99
+            s/1.99
         </x-slot>
     </x-mainpage.partes.card>
 
@@ -61,14 +61,14 @@
         </x-slot>
 
         <x-slot name="img">
-            {{ asset('imghome/bebidas.jpg') }}
+            {{ asset('imghome/platillos/chicha.png') }}
         </x-slot>
-        bebidas
+        CHICHA MORADA
         <x-slot name="description">
-            esta es una descripcion de bebidas
+            1 jarra de 1L
         </x-slot>
         <x-slot name="price">
-            s/19.99
+            s/5.99
         </x-slot>
     </x-mainpage.partes.card>
 
@@ -78,14 +78,14 @@
         </x-slot>
 
         <x-slot name="img">
-            {{ asset('imghome/bebidas.jpg') }}
+            {{ asset('imghome/platillos/incakola.png') }}
         </x-slot>
-        bebidas
+        INKA KOLA
         <x-slot name="description">
-            esta es una descripcion de bebidas
+            Gaseosa personal
         </x-slot>
         <x-slot name="price">
-            s/19.99
+            s/3.99
         </x-slot>
     </x-mainpage.partes.card>
 
@@ -95,17 +95,50 @@
         </x-slot>
 
         <x-slot name="img">
-            {{ asset('imghome/bebidas.jpg') }}
+            {{ asset('imghome/platillos/cocacola.png') }}
         </x-slot>
-        bebidas
+        COCA COLA
         <x-slot name="description">
-            esta es una descripcion de bebidas
+        Gaseosa personal
         </x-slot>
         <x-slot name="price">
-            s/19.99
+            s/3.99
         </x-slot>
     </x-mainpage.partes.card>
 
+    <x-mainpage.partes.card>
+        <x-slot name="link">
+            {{ route('bebidas')}}
+        </x-slot>
+
+        <x-slot name="img">
+            {{ asset('imghome/platillos/fanta.png') }}
+        </x-slot>
+        FANTA
+        <x-slot name="description">
+        Gaseosa personal
+        </x-slot>
+        <x-slot name="price">
+            s/3.99
+        </x-slot>
+    </x-mainpage.partes.card>
+
+    <x-mainpage.partes.card>
+        <x-slot name="link">
+            {{ route('bebidas')}}
+        </x-slot>
+
+        <x-slot name="img">
+            {{ asset('imghome/platillos/sprite.png') }}
+        </x-slot>
+        SPRIT
+        <x-slot name="description">
+        Gaseosa personal
+        </x-slot>
+        <x-slot name="price">
+            s/3.99
+        </x-slot>
+    </x-mainpage.partes.card>
 </section>
 
 

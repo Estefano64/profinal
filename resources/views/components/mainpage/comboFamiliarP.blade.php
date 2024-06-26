@@ -11,15 +11,15 @@
         </x-slot>
 
         <x-slot name="img">
-            {{ asset('imghome/combofamiliar.jpg') }}
+            {{ asset('imghome/platillos/pollo.png') }}
         </x-slot>
-        COMBOS FAMILIARES
+        POLLO ENTERO CLÁSICO:
 
         <x-slot name="description">
-            esta es una descripcion de combos familiares
+        1 Pollo + papas fritas + aguadito + ensalada
         </x-slot>
         <x-slot name="price">
-        s/79.99
+        s/57.99
         </x-slot>
 
     </x-mainpage.partes.card>
@@ -31,15 +31,16 @@
         </x-slot>
 
         <x-slot name="img">
-            {{ asset('imghome/combofamiliar.jpg') }}
+            {{ asset('imghome/platillos/pollomiguelon.png') }}
         </x-slot>
-        COMBOS FAMILIARES
+
+POLLO ENTERO MIGUELÓN
+
 
         <x-slot name="description">
-            esta es una descripcion de combos familiares
-        </x-slot>
+        1 Pollo + papa andina ó papa criolla + aguadito + mollejitas fritas + chorizo + ensalada        </x-slot>
         <x-slot name="price">
-        s/79.99
+        s/65.99
         </x-slot>
 
     </x-mainpage.partes.card>
@@ -51,77 +52,19 @@
         </x-slot>
 
         <x-slot name="img">
-            {{ asset('imghome/combofamiliar.jpg') }}
+            {{ asset('imghome/platillos/pollocombinado.png') }}
         </x-slot>
-        COMBOS FAMILIARES
+        POLLO ENTERO COMBINADO
+
 
         <x-slot name="description">
-            esta es una descripcion de combos familiares
+        1 Pollo + papas fritas + aguadito + ensalada
         </x-slot>
         <x-slot name="price">
-        s/79.99
+        s/57.99
         </x-slot>
 
     </x-mainpage.partes.card>
-
-    <x-mainpage.partes.card>
-        <x-slot name="link">
-            {{ route('comboFamiliar')}}
-        </x-slot>
-
-        <x-slot name="img">
-            {{ asset('imghome/combofamiliar.jpg') }}
-        </x-slot>
-        COMBOS FAMILIARES
-
-        <x-slot name="description">
-            esta es una descripcion de combos familiares
-        </x-slot>
-        <x-slot name="price">
-        s/79.99
-        </x-slot>
-
-    </x-mainpage.partes.card>
-
-    <x-mainpage.partes.card>
-        <x-slot name="link">
-            {{ route('comboFamiliar')}}
-        </x-slot>
-
-        <x-slot name="img">
-            {{ asset('imghome/combofamiliar.jpg') }}
-        </x-slot>
-        COMBOS FAMILIARES
-
-        <x-slot name="description">
-            esta es una descripcion de combos familiares
-        </x-slot>
-        <x-slot name="price">
-        s/79.99
-        </x-slot>
-
-    </x-mainpage.partes.card>
-
-    <x-mainpage.partes.card>
-        <x-slot name="link">
-            {{ route('comboFamiliar')}}
-        </x-slot>
-
-        <x-slot name="img">
-            {{ asset('imghome/combofamiliar.jpg') }}
-        </x-slot>
-        COMBOS FAMILIARES
-
-        <x-slot name="description">
-            esta es una descripcion de combos familiares
-        </x-slot>
-        <x-slot name="price">
-        s/79.99
-        </x-slot>
-
-    </x-mainpage.partes.card>
-
-
 
 </section>
 

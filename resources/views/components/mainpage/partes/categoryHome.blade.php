@@ -14,17 +14,7 @@
 
     </x-mainpage.partes.cart>
 
-    <x-mainpage.partes.cart>
-        <x-slot name="link">
-            {{ route('parrillas')}}
-        </x-slot>
 
-        <x-slot name="img">
-            {{ asset('imghome/parrillas.jpg') }}
-        </x-slot>
-        PARRILLAS
-
-    </x-mainpage.partes.cart>
 
     <x-mainpage.partes.cart>
         <x-slot name="link">
