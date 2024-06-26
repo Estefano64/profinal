@@ -3,24 +3,20 @@
     <div id="default-carousel" class="relative w-full" data-carousel="slide">
         <!-- Carousel wrapper -->
         <div class="relative h-180 md:h-96" data-carousel-inner>
-            <!-- Item 1 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{{ asset('images/carrusel01.jpeg') }}"
-                    class="object-cover w-full h-full" alt="Slide 1">
-            </div>
+
             <!-- Item 2 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{{ asset('images/carrusel03.jpeg') }}"
+                <img src="{{ asset('images/1.png') }}"
                     class="object-cover w-full h-full" alt="Slide 2">
             </div>
             <!-- Item 3 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{{ asset('images/carrusel02.jpeg') }}"
+                <img src="{{ asset('images/2.png') }}"
                     class="object-cover w-full h-full" alt="Slide 3">
             </div>
             <!-- Item 4 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{{ asset('images/carrusel04.jpeg') }}"
+                <img src="{{ asset('images/3.png') }}"
                     class="object-cover w-full h-full" alt="Slide 3">
             </div>
         </div>
