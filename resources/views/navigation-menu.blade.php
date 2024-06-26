@@ -10,32 +10,45 @@
                     </a>
                 </div>
 
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
-                    <x-nav-link href="{{ route('mesas.index') }}" :active="request()->routeIs('mesas.index')">
-                                    {{ __('Mesas') }}
-                     </x-nav-link>
-                     <x-nav-link href="{{ route('platillos.index') }}" :active="request()->routeIs('platillos.index')">
-                                    {{ __('Platos') }}
-                     </x-nav-link>
-                     <x-nav-link href="{{ route('cuentaClientes.index') }}" :active="request()->routeIs('cuentaClientes.index')">
-                                    {{ __('Clientes') }}
-                     </x-nav-link>
-                     <x-nav-link href="{{ route('metodoPagos.index') }}" :active="request()->routeIs('metodoPagos.index')">
-                                    {{ __('MétodosPago') }}
-                     </x-nav-link>
-                     <x-nav-link href="{{ route('pedidos.index') }}" :active="request()->routeIs('pedidos.index')">
-                                    {{ __('Listado pedidos') }}
-                     </x-nav-link>
-                     <x-nav-link href="{{ route('cuentas.index') }}" :active="request()->routeIs('cuentas.index')">
-                                    {{ __('Crear y gestionar cuenta') }}
-                     </x-nav-link>
-                     <x-nav-link href="{{ route('users.index') }}" :active="request()->routeIs('users.index')">
-                                    {{ __('Empleados') }}
-                     </x-nav-link>
+<!-- Navigation Links -->
+            <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                    {{ __('Dashboard') }}
+                </x-nav-link>
+                @auth
+                    @if(Auth::user()->rol === 'Encargado')
+                        <x-nav-link href="{{ route('mesas.index') }}" :active="request()->routeIs('mesas.index')">
+                            {{ __('Mesas') }}
+                        </x-nav-link>
+                        <x-nav-link href="{{ route('platillos.index') }}" :active="request()->routeIs('platillos.index')">
+                            {{ __('Platos') }}
+                        </x-nav-link>
+                        <x-nav-link href="{{ route('cuentaClientes.index') }}" :active="request()->routeIs('cuentaClientes.index')">
+                            {{ __('Clientes') }}
+                        </x-nav-link>
+                        <x-nav-link href="{{ route('metodoPagos.index') }}" :active="request()->routeIs('metodoPagos.index')">
+                            {{ __('MétodosPago') }}
+                        </x-nav-link>
+                        <x-nav-link href="{{ route('pedidos.index') }}" :active="request()->routeIs('pedidos.index')">
+                            {{ __('Listado pedidos') }}
+                        </x-nav-link>
+                        <x-nav-link href="{{ route('cuentas.index') }}" :active="request()->routeIs('cuentas.index')">
+                            {{ __('Crear y gestionar cuenta') }}
+                        </x-nav-link>
+                        <x-nav-link href="{{ route('users.index') }}" :active="request()->routeIs('users.index')">
+                            {{ __('Empleados') }}
+                        </x-nav-link>
+                    @elseif(Auth::user()->rol === 'Mozo')
+                        <x-nav-link href="{{ route('pedidos.index') }}" :active="request()->routeIs('pedidos.index')">
+                            {{ __('Listado pedidos') }}
+                        </x-nav-link>
+                        <x-nav-link href="{{ route('cuentas.index') }}" :active="request()->routeIs('cuentas.index')">
+                            {{ __('Crear y gestionar cuenta') }}
+                        </x-nav-link>
+                    @endif
+                @endauth
+
+
                 </div>
             </div>
 
