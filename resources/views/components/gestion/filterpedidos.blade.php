@@ -21,7 +21,6 @@
                     @foreach($columns as $key => $column)
                     <th scope="col" class="px-6 py-3 @if(in_array($key, ['usuario_name', 'tipo', 'idMesa'])) bg-gray-200 @else bg-gray-300 @endif">{{ $column }}</th>
                     @endforeach
-                    <th scope="col" class="px-6 py-3 bg-gray-300">Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -32,24 +31,18 @@
                         @if($key === 'usuario_name')
                         {{ $item->usuario->name }}
                         @elseif($key === 'platillo_name')
-                        {{ $item->pedidoplatillo->platillo->nombre }}
+                        {{ $item->pedidoplatillo->platillo->nombre }}                      
+                        @elseif($key === 'platillo_precio')
+                        {{ $item->pedidoplatillo->platillo->precio }}
                         @elseif($key === 'cantidad')
                         {{ $item->pedidoplatillo->cantidad }}
-                        @elseif($key === 'nota')
-                        {{ $item->pedidoplatillo->nota }}
+                        @elseif($key === 'total')
+                        {{ $item->pedidoplatillo->total }}
                         @else
                         {{ $item->$key }}
                         @endif                       
                     </td>
                     @endforeach
-                    <td class="px-6 py-4 bg-gray-200">
-                        <form action="{{ route($editRoute, $item) }}" method="POST" class="inline">
-                            @csrf
-                            @method('PUT')
-                            <input type="hidden" name="estado" value="completado">
-                            <button type="submit" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ml-3">Marcar como Completado</button>
-                        </form>
-                    </td>
                 </tr>
                 @endforeach
             </tbody>

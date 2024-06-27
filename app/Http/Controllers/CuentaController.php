@@ -21,7 +21,9 @@ class CuentaController extends Controller
     {
         try {
             // Paso 1: Obtener las cuentas con estado 'pendiente'
-            $cuentas = Cuenta::where('estado', 'pendiente')->get();
+            $cuentas = Cuenta::where('estado', 'pendiente')
+                ->orderBy('created_at', 'desc')
+                ->get();
 
             foreach ($cuentas as $cuenta) {
                 // Inicializar subtotal en 0
@@ -93,10 +95,10 @@ class CuentaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
-    {
-        //
-    }
+    public function show(Cuenta $cuenta)
+{
+
+}
 
     /**
      * Show the form for editing the specified resource.
@@ -106,7 +108,10 @@ class CuentaController extends Controller
         try {
             $cuentaClientes = CuentaCliente::all();
             $metodosPago = MetodoPago::all();
-            return view('cuentas.edit', compact('cuenta', 'cuentaClientes', 'metodosPago'));
+            $pedidos = Pedido::with(['pedidoplatillo.platillo'])
+                ->where('idCuenta', $cuenta->idCuenta)
+                ->get();
+            return view('cuentas.edit', compact('cuenta', 'cuentaClientes', 'metodosPago', 'pedidos'));
         } catch (ModelNotFoundException $e) {
             return redirect()->route('cuentas.index')->with('error', 'Cuenta no encontrada.');
         } catch (Exception $e) {

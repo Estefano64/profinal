@@ -15,8 +15,6 @@
                     ];
                 })->toArray()
             ],
-
-            ['name' => 'subtotal', 'label' => 'Subtotal', 'type' => 'number', 'step' => '0.01', 'value' => $cuenta->subtotal, 'readonly' => true],
             ['name' => 'idMetodoPago', 'label' => 'Método de Pago', 'type' => 'select',
             'options' => $metodosPago->map(function($metodosPago) {
                     return [
@@ -25,13 +23,30 @@
                     ];
                 })->toArray()
             ],
-            ['name' => 'impuesto', 'label' => 'Impuesto', 'type' => 'number', 'step' => '0.01', 'value' => $cuenta->impuesto, 'readonly' => true],
             ['name' => 'estado', 'label' => 'Estado', 'type' => 'select', 'options' => [
                 ['value' => 'pagado', 'label' => 'Pagado'],
                 ['value' => 'pendiente', 'label' => 'Pendiente']
-            ], 'value' => $cuenta->estado],         
+            ], 'value' => $cuenta->estado],    
+            ['name' => 'subtotal', 'label' => 'Subtotal', 'type' => 'number', 'step' => '0.01', 'value' => $cuenta->subtotal, 'readonly' => true],   
+            ['name' => 'impuesto', 'label' => 'Impuesto', 'type' => 'number', 'step' => '0.01', 'value' => $cuenta->impuesto, 'readonly' => true],  
             ['name' => 'total', 'label' => 'Total', 'type' => 'number', 'step' => '0.01', 'value' => $cuenta->total, 'readonly' => true]
         ]
     ])
     @endcomponent
+
+    @component('components.gestion.filterpedidos', [
+        'title' => 'Listado de Pedidos',
+        'columns' => [           
+            'usuario_name' => 'Usuario',
+            'tipo' => 'Tipo',
+            'platillo_name' => 'Platillo',
+            'cantidad' => 'Cantidad',
+            'platillo_precio' => 'Precio',
+            'total' => 'Total'
+        ],
+        'data' => $pedidos,
+        'idKey' => 'idPedido'
+    ])
+    @endcomponent
+
 @endsection

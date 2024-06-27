@@ -12,4 +12,10 @@ class Mesa extends Model
     protected $primaryKey='idMesa';
 
     protected $fillable = ['numero', 'capacidad', 'estado'];
+
+    //1 a N :: Mesa a Pedido
+    public function pedidos()
+    {
+        return $this->hasMany(Pedido::class);
+    }
 }

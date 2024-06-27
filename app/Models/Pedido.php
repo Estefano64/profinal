@@ -28,9 +28,8 @@ class Pedido extends Model
         return $this->belongsTo(Cuenta::class, 'idCuenta');
     }
 
-    public function platillos()
-{
-        return $this->belongsToMany(Platillo::class, 'pedido_platillos', 'idPedido', 'idPlatillo')
-                    ->withPivot('cantidad','total');
-}
+    public function pedidoplatillo()
+    {
+        return $this->belongsTo(PedidoPlatillo::class, 'idPedidoPlatillo');
+    }
 }

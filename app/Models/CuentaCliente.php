@@ -14,4 +14,10 @@ class CuentaCliente extends Model
     protected $primaryKey='idCuentaCliente';
 
     protected $fillable = ['nombre', 'dni'];
+
+    //1 a N :: CuentaCliente a Cuenta
+    public function cuentas()
+    {
+        return $this->hasMany(Cuenta::class);
+    }
 }

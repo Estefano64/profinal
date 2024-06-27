@@ -21,7 +21,7 @@ class PedidoFactory extends Factory
     public function definition(): array
     {
         return [
-            'estado' => $this->faker->randomElement(['pendiente', 'enProceso', 'completado', 'entregado']),
+            'estado' => $this->faker->randomElement(['pendiente', 'completado']),
             'tipo' => $this->faker->randomElement(['paraLlevar', 'enLocal']),
             'user_id' => User::inRandomOrder()->first()->id,
             'idMesa' => Mesa::inRandomOrder()->first()->idMesa,

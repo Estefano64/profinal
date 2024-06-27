@@ -23,18 +23,18 @@
             <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                 <tr>
                     @foreach($columns as $column)
-                        <th scope="col" class="px-6 py-3">{{ $column }}</th>
+                        <th scope="col" class="px-6 py-3 bg-gray-200">{{ $column }}</th>
                     @endforeach
-                    <th scope="col" class="px-6 py-3">Acciones</th>
+                    <th scope="col" class="px-6 py-3 bg-gray-200">Acciones</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($data as $item)
                 <tr class="bg-white border-b">
                     @foreach(array_keys($columns) as $key)
-                        <td class="px-6 py-4">{{ $item->$key }}</td>
+                        <td class="px-6 py-4 bg-gray-100">{{ $item->$key }}</td>
                     @endforeach
-                    <td class="px-6 py-4">
+                    <td class="px-6 py-4 bg-gray-100">
                         <a href="{{ route('pedidoPlatillos.create', ['idCuenta' => $item->idCuenta]) }}" class="font-medium text-green-600 dark:text-green-500 hover:underline ml-3">Agregar Pedido</a>
                         <a href="{{ route($editRoute, $item) }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Finalizar</a>
                         <form action="{{ route($deleteRoute, $item) }}" method="POST" class="inline" onsubmit="return confirm('¿Está seguro que desea eliminar este elemento?');">

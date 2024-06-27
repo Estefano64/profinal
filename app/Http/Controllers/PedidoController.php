@@ -16,7 +16,10 @@ class PedidoController extends Controller
     public function index()
     {
         try {
-            $pedidos = Pedido::with('usuario')->get();
+            $pedidos = Pedido::with(['usuario', 'pedidoplatillo.platillo'])
+            ->where('estado', 'pendiente')
+            ->orderBy('created_at', 'desc')
+            ->get();
             return view('pedidos.index', compact('pedidos'));
         } catch (QueryException $e) {
             return redirect()->route('home')->with('error', 'Error al cargar los pedidos: ' . $e->getMessage());
@@ -35,7 +38,6 @@ class PedidoController extends Controller
 
     public function store(Request $request)
     {
-
     }
 
     /**

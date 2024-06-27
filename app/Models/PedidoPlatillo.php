@@ -28,9 +28,6 @@ class PedidoPlatillo extends Model
         });
     }
 
-    /**
-     * Get the platillo associated with the pedido platillo.
-     */
     public function platillo()
     {
         return $this->belongsTo(Platillo::class, 'idPlatillo');
@@ -38,7 +35,7 @@ class PedidoPlatillo extends Model
 
     public function pedido()
     {
-        return $this->belongsTo(Pedido::class, 'idPedido');
+        return $this->hasOne(Pedido::class, 'idPedido');
     }
 
 }

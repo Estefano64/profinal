@@ -14,4 +14,10 @@ class MetodoPago extends Model
     protected $primaryKey='idMetodoPago';
 
     protected $fillable = ['nombreMetodo'];
+
+    //1 a N :: MetodoPago a Pedido
+    public function pedidos()
+    {
+        return $this->hasMany(Pedido::class);
+    }
 };

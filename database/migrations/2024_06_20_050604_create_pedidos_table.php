@@ -13,7 +13,7 @@ class CreatePedidosTable extends Migration
     {
         Schema::create('pedidos', function (Blueprint $table) {
             $table->id('idPedido');
-            $table->enum('estado', ['pendiente', 'enProceso', 'completado', 'entregado'])->default('pendiente');
+            $table->enum('estado', ['pendiente', 'completado'])->default('pendiente');
             $table->enum('tipo', ['paraLlevar', 'enLocal']);
             $table->foreignId('idMesa')->nullable()->constrained('mesas','idMesa');
             $table->foreignId('user_id')->constrained('users','id');

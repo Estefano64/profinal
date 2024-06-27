@@ -3,14 +3,13 @@
 @section('content')
     @component('components.gestion.indexAv', [
         'title' => 'Listado de Pedidos',
-        'createRoute' => route('pedidos.create'),
-        'createButtonText' => 'Nuevo Pedido',
-        'columns' => [
-            'created_at' => 'Generado',
-            'tipo' => 'Tipo',
-            'idMesa' => 'Mesa',
+        'columns' => [           
             'usuario_name' => 'Usuario',
-            'idCuenta' => 'Cuenta',
+            'tipo' => 'Tipo',
+            'idMesa' => 'Mesa/Ticket',
+            'platillo_name' => 'Platillo',
+            'cantidad' => 'Cantidad',
+            'nota' => 'Nota',
             'estado' => 'Estado'
         ],
         'data' => $pedidos,
