@@ -12,7 +12,7 @@
         <x-slot name="img">
             {{ asset('imghome/platillos/pollo.png') }}
         </x-slot>
-        POLLO ENTERO CLÁSICO:
+        POLLO ENTERO CLÁSICO
 
         <x-slot name="description">
         1 Pollo + papas fritas + aguadito + ensalada
