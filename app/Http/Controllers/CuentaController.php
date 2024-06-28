@@ -10,6 +10,7 @@ use App\Models\CuentaCliente;
 use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use PDF;
 use Exception;
 
 class CuentaController extends Controller
@@ -151,5 +152,16 @@ class CuentaController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+    public function generarBoleta(Request $request, Cuenta $cuenta)
+    {
+        // Recoger los datos de la cuenta y los pedidos
+        $pedidos = $cuenta->pedidos; // Asegúrate de tener la relación definida
+
+        // Crear el PDF
+        $pdf = PDF::loadView('boleta', compact('cuenta', 'pedidos'));
+
+        // Descargar el PDF
+        return $pdf->download('boleta.pdf');
     }
 }

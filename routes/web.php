@@ -33,6 +33,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('cuentas', CuentaController::class);
     Route::resource('pedidoPlatillos', PedidoPlatilloController::class);
     Route::resource('users', UserController::class);
+    Route::put('/cuentas/{cuenta}/generarBoleta', [CuentaController::class, 'generarBoleta'])->name('cuentas.generarBoleta');
+
 });
 
 Route::get('/home', function () {

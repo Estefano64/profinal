@@ -5,7 +5,7 @@
         'resource' => 'Cuenta',
         'action' => route('cuentas.update', $cuenta),
         'method' => 'PUT',
-        'buttonText' => 'Generar boleta/factura',
+        'buttonText' => 'Actualizar Cuenta',
         'fields' => [
             ['name' => 'idCuentaCliente', 'label' => 'Cliente', 'type' => 'select', 
             'options' => $cuentaClientes->map(function($cuentaClientes) {
@@ -48,5 +48,12 @@
         'idKey' => 'idPedido'
     ])
     @endcomponent
-
+        
+    <form action="{{ route('cuentas.generarBoleta', $cuenta->idCuenta) }}" class="text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center" method="POST">
+        @csrf
+        @method('PUT')
+        <button type="submit">Generar Boleta</button>
+    </form>
 @endsection
+
+
