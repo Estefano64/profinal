@@ -9,28 +9,34 @@ class Pedido extends Model
 {
     use HasFactory;
 
-    protected $primaryKey='idPedido'; // Define la clave primaria como 'idPedido'
+    protected $primaryKey='idPedido';
 
     protected $fillable = ['estado', 'tipo', 'idMesa', 'user_id', 'idCuenta', 'idPedidoPlatillo'];
-    // Define los campos que se pueden asignar masivamente ('fillable')
 
     public function mesa()
     {
-        return $this->belongsTo(Mesa::class, 'idMesa'); // Define la relación con Mesa (pertenece a una Mesa)
+        return $this->belongsTo(Mesa::class, 'idMesa');
     }
 
     public function usuario()
     {
-        return $this->belongsTo(User::class, 'user_id'); // Define la relación con User (pertenece a un Usuario)
+        return $this->belongsTo(User::class, 'user_id');
     }
 
     public function cuenta()
     {
-        return $this->belongsTo(Cuenta::class, 'idCuenta'); // Define la relación con Cuenta (pertenece a una Cuenta)
+        return $this->belongsTo(Cuenta::class, 'idCuenta');
     }
 
     public function pedidoplatillo()
     {
-        return $this->belongsTo(PedidoPlatillo::class, 'idPedidoPlatillo'); // Define la relación con PedidoPlatillo (pertenece a un PedidoPlatillo)
+        return $this->belongsTo(PedidoPlatillo::class, 'idPedidoPlatillo');
+    }
+
+    protected static function booted()
+    {
+        static::deleting(function ($pedido) {
+            $pedido->pedidoplatillo()->delete();
+        });
     }
 }

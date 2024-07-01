@@ -63,6 +63,15 @@ class User extends Authenticatable
         ];
     }
 
+    protected static function booted()
+    {
+        static::deleting(function ($user) {
+            $user->pedidos()->each(function ($pedido) {
+                $pedido->delete();
+            });
+        });
+    }
+
     //1 a N :: User a Pedido
     public function pedidos()
     {

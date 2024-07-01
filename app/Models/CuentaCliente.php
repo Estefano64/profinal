@@ -15,6 +15,15 @@ class CuentaCliente extends Model
 
     protected $fillable = ['nombre', 'dni'];
 
+    protected static function booted()
+    {
+        static::deleting(function ($cuentaCliente) {
+            $cuentaCliente->cuentas()->each(function ($cuenta) {
+                $cuenta->delete();
+            });
+        });
+    }
+    
     //1 a N :: CuentaCliente a Cuenta
     public function cuentas()
     {

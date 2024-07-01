@@ -15,6 +15,15 @@ class MetodoPago extends Model
 
     protected $fillable = ['nombreMetodo'];
 
+    protected static function booted()
+    {
+        static::deleting(function ($metodoPago) {
+            $metodoPago->pedidos()->each(function ($pedido) {
+                $pedido->delete();
+            });
+        });
+    }
+
     //1 a N :: MetodoPago a Pedido
     public function pedidos()
     {

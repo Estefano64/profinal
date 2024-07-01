@@ -13,6 +13,15 @@ class Platillo extends Model
 
     protected $fillable = ['nombre', 'descripcion', 'precio'];
 
+    protected static function booted()
+    {
+        static::deleting(function ($platillo) {
+            $platillo->pedidoPlatillos()->each(function ($pedidoPlatillo) {
+                $pedidoPlatillo->delete();
+            });
+        });
+    }
+    
     //1 a N :: Platillo a PedidoPlatillo
     public function pedidoPlatillos()
     {

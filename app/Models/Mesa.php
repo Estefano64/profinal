@@ -13,6 +13,15 @@ class Mesa extends Model
 
     protected $fillable = ['numero', 'capacidad', 'estado'];
 
+    protected static function booted()
+    {
+        static::deleting(function ($mesa) {
+            $mesa->pedidos()->each(function ($pedido) {
+                $pedido->delete();
+            });
+        });
+    }
+    
     //1 a N :: Mesa a Pedido
     public function pedidos()
     {

@@ -13,6 +13,15 @@ class Cuenta extends Model
 
     protected $fillable = ['idCuentaCliente', 'idMetodoPago', 'estado', 'subtotal', 'impuesto', 'total'];
 
+    protected static function booted()
+    {
+        static::deleting(function ($cuenta) {
+            $cuenta->pedidos()->each(function ($pedido) {
+                $pedido->delete();
+            });
+        });
+    }
+    
     public function cliente()
     {
         return $this->belongsTo(CuentaCliente::class, 'idCuentaCliente');

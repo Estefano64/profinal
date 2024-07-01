@@ -20,7 +20,7 @@ class MesaFactory extends Factory
         return [
             'numero' => $this->faker->unique()->numberBetween(1, 20),
             'capacidad' => $this->faker->numberBetween(2, 10),
-            'estado' => $this->faker->randomElement(['disponible', 'ocupada', 'reservada']),
+            'estado' => $this->faker->randomElement(['disponible', 'ocupada']),
         ];
     }
 }
