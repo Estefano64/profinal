@@ -96,10 +96,48 @@ class CuentaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Cuenta $cuenta)
-{
+    public function show()
+    {
+        try {
+            // Paginación: obtiene solo las primeras 10 cuentas completado por página
+            $cuentas = Cuenta::where('estado', 'pagado')
+                ->orderBy('created_at', 'desc')             
+                ->paginate(10);
 
-}
+            foreach ($cuentas as $cuenta) {
+                $subtotal = 0;
+
+                // Obtener los pedidos relacionados con la cuenta
+                $pedidos = Pedido::where('idCuenta', $cuenta->idCuenta)->get();
+
+                foreach ($pedidos as $pedido) {
+                    $pedidoPlatillos = PedidoPlatillo::where('idPedidoPlatillo', $pedido->idPedidoPlatillo)->get();
+
+                    foreach ($pedidoPlatillos as $pedidoPlatillo) {
+                        $subtotal += $pedidoPlatillo->total;
+                    }
+                }
+
+                // Calcular impuesto y total
+                $impuesto = $subtotal * 0.18;
+                $total = $subtotal + $impuesto;
+
+                // Actualizar la cuenta con los nuevos valores
+                $cuenta->subtotal = $subtotal;
+                $cuenta->impuesto = $impuesto;
+                $cuenta->total = $total;
+
+                $cuenta->save();
+            }
+
+            return view('cuentas.show', compact('cuentas'));
+        } catch (QueryException $e) {
+            return redirect()->back()->with('error', 'Error al cargar las cuentas: ' . $e->getMessage());
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Ocurrió un error inesperado: ' . $e->getMessage());
+        }
+    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -149,10 +187,20 @@ class CuentaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Cuenta $cuenta)
     {
-        //
+        try {
+            $cuenta->delete();
+            return redirect()->route('cuentas.show')->with('success', 'Cuenta eliminada exitosamente.');
+        } catch (QueryException $e) {
+            return redirect()->back()->with('error', 'Error al eliminar la cuenta seleccionada: ' . $e->getMessage());
+        } catch (ModelNotFoundException $e) {
+            return redirect()->route('cuentas.show')->with('error', 'Cuenta no encontrada.');
+        } catch (Exception $e) {
+            return redirect()->back()->with('error', 'Ocurrió un error inesperado: ' . $e->getMessage());
+        }
     }
+
     public function generarBoleta(Request $request, Cuenta $cuenta)
     {
         // Recoger los datos de la cuenta y los pedidos

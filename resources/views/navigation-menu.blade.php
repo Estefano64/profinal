@@ -35,8 +35,14 @@
                         <x-nav-link href="{{ route('cuentas.index') }}" :active="request()->routeIs('cuentas.index')">
                             {{ __('Crear y gestionar cuenta') }}
                         </x-nav-link>
+                        <x-nav-link href="{{ route('cuentas.show') }}" :active="request()->routeIs('cuentas.show')">
+                            {{ __('Listado de cuenta') }}
+                        </x-nav-link>
                         <x-nav-link href="{{ route('users.index') }}" :active="request()->routeIs('users.index')">
                             {{ __('Empleados') }}
+                        </x-nav-link>
+                        <x-nav-link href="{{ route('notification.form') }}" :active="request()->routeIs('notification.form')">
+                            {{ __('Comunicar') }}
                         </x-nav-link>
                     @elseif(Auth::user()->rol === 'Mozo')
                         <x-nav-link href="{{ route('pedidos.index') }}" :active="request()->routeIs('pedidos.index')">
