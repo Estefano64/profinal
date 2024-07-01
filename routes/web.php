@@ -9,6 +9,9 @@ use App\Http\Controllers\PedidoController;
 use App\Http\Controllers\CuentaController;
 use App\Http\Controllers\PedidoPlatilloController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\NotificationController;
+
+
 
 Route::get('/', function () {
     return view('home');
@@ -31,11 +34,15 @@ Route::middleware('auth')->group(function () {
     Route::resource('metodoPagos', MetodoPagoController::class);
     Route::resource('pedidos', PedidoController::class);
     Route::resource('cuentas', CuentaController::class);
+    Route::get('/cuentas/listado', [CuentaController::class, 'show'])->name('cuentas.show');
     Route::resource('pedidoPlatillos', PedidoPlatilloController::class);
     Route::resource('users', UserController::class);
     Route::put('/cuentas/{cuenta}/generarBoleta', [CuentaController::class, 'generarBoleta'])->name('cuentas.generarBoleta');
+    Route::get('/send-notification', [NotificationController::class, 'showForm'])->name('notification.form');
+    Route::post('/send-notification', [NotificationController::class, 'sendNotification'])->name('notifications.send');
 
 });
+
 
 Route::get('/home', function () {
     return view('home');

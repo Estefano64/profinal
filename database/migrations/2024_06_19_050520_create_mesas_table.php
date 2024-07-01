@@ -15,7 +15,7 @@ class CreateMesasTable extends Migration
             $table->id('idMesa');
             $table->integer('numero')->unique();
             $table->integer('capacidad');
-            $table->enum('estado', ['disponible', 'ocupada', 'reservada']);
+            $table->enum('estado', ['disponible', 'ocupada']);
             $table->timestamps();
         });
     }
