@@ -10,6 +10,7 @@ use Exception;
 
 class MetodoPagoController extends Controller
 {
+    // Muestra una lista de todos los métodos de pago
     public function index()
     {
         try {
@@ -22,11 +23,13 @@ class MetodoPagoController extends Controller
         }
     }
 
+    // Muestra el formulario para crear un nuevo método de pago
     public function create()
     {
         return view('metodoPagos.create');
     }
 
+    // Almacena un nuevo método de pago en la base de datos
     public function store(Request $request)
     {
         try {
@@ -43,6 +46,7 @@ class MetodoPagoController extends Controller
         }
     }
 
+    // Muestra el formulario para editar un método de pago existente
     public function edit(MetodoPago $metodoPago)
     {
         try {
@@ -54,6 +58,7 @@ class MetodoPagoController extends Controller
         }
     }
 
+    // Actualiza un método de pago existente en la base de datos
     public function update(Request $request, MetodoPago $metodoPago)
     {
         try {
@@ -72,6 +77,7 @@ class MetodoPagoController extends Controller
         }
     }
 
+    // Elimina un método de pago existente de la base de datos
     public function destroy(MetodoPago $metodoPago)
     {
         try {
